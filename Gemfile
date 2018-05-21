@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 #bootstrap
 gem 'bootstrap-sass'
+gem 'sass-rails' , '~> 4.0.3'
 
 gem 'devise'
 gem 'devise-i18n'
