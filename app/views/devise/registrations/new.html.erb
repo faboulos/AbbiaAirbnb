@@ -5,6 +5,8 @@
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= render 'shared/devise_errors' %>
+          
+          <%= f.text_field :fullname, autofocus: true, class: "form-control", placeholder: "Nom complet ( Prénom + Nom)" %>
 
           <div class="form-group">
             <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder:"Adresse e-email" %>
@@ -17,9 +19,7 @@
             <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"créez mot de passe" %>
           </div>
 
-          <div class="form-group">
-            <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control", placeholder:"retapez mot de passe" %>
-          </div>
+          
 
           <div class="actions">
             <%= f.submit "Inscription",  class:"btn btn-primary" %>
