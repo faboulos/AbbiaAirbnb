@@ -1,4 +1,4 @@
-class RoomController < ApplicationController
+class RoomsController < ApplicationController
   
   before_action :set_roomm, only: [:show, :edit, :update]
   before_action :authenticate_user!, except:[:show]
@@ -15,7 +15,7 @@ class RoomController < ApplicationController
   
   def create
       
-    @room = current_user.rooms.build(room_params)
+     @room = current_user.rooms.build(room_params)
     
     if @room.save
           redirect_to @room, notice:"votre annonce a été ajouté avec succès"
@@ -31,7 +31,7 @@ class RoomController < ApplicationController
   def update
       
       if @room.update(room_params)
-          redirect to @room, notice: "Modification enregistrée ..."
+          redirect_to @room, notice: "Modification enregistrée ..."
       else
         
         render :edit
