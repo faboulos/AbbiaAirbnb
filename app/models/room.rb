@@ -9,5 +9,4 @@ class Room < ActiveRecord::Base
   validates :summary, presence:true, length: {maximum: 600}
   validates :adress, presence:true, 
   validates :price, numericality: {only_integer: true, greater_than: 5}
-  
 end
