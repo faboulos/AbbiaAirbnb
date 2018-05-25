@@ -27,7 +27,7 @@ class RoomsController < ApplicationController
             end
         end
           @photos = @room.photos
-          redirect_to @edit_room_path(@room), notice:"votre annonce a été ajouté avec succès"
+          redirect_to edit_room_path(@room), notice:"votre annonce a été ajouté avec succès"
     else
       render :new
      end
