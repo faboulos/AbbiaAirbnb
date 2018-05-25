@@ -1,8 +1,8 @@
-<% if @photos %> #on vérifie la présence de photos pour continuer à afficher
+<% if @photos %> 
  
  <div class="row"> 
  
-        <% @photos.each do |photo| %> #on crée une boucle pour traiter chaque photo indépendamment
+        <% @photos.each do |photo| %> 
  
              <div class="col-md-4"> 
  
@@ -13,7 +13,15 @@
                              <%= image_tag photo.image.url() %> #on affiche la photo 
  
                         </div>
- 
+                        <div class="panel-body">
+                          <span class="pull-right">
+                            <%= link_to photo, remote: true, method: :delete, data: {confirm: "Certain de vouloir supprimer cette photo"} do%>
+                          
+                              <i class="fa fa-times fa-lg"></i>
+                            
+                              <% end %>
+                          </span>  
+                        </div>
                   </div>
  
              </div>
