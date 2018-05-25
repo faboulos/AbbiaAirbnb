@@ -25,7 +25,9 @@ gem 'rails-i18n'
 gem "paperclip"
 gem 'toastr-rails'
 
-gem "font-awesome-sass"
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+
+gem 'coffee-script-source', '1.8.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
