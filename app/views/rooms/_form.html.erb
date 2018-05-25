@@ -2,7 +2,7 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-        Devenez hôte Aiirbnb
+        Devenez hôte Ekonda
     </div>
     <div class="panel-body">
         <div class="container">
@@ -80,8 +80,23 @@
                         <%= f.text_field :address, placeholder: "Où est situé votre logement ?", class: "form-control" %>
                     </div>
                 </div>
-                
-            <div class="row">
+            
+          <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <span class="btn btn default btn-file">
+                    <i class ="fa fa-cloud-upload fa-lg"></i> Téléchargez vos photos !
+                    <%= file_field_tag "images[]", type::file, multiple: true %>
+                  </span>
+                </div>
+            </div>
+          </div>
+          
+          <div id="photos">
+            <%= render 'photos/list' %>
+          </div>
+          
+            <div class="row"> 
                 <div class="col-md-4">
                     <div class="form-group">
                         <%= f.check_box :is_wifi %> Wifi
