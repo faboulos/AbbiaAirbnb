@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180526074407) do
+ActiveRecord::Schema.define(version: 20180526113918) do
 
   create_table "photos", force: true do |t|
     t.integer  "room_id"
@@ -24,6 +24,20 @@ ActiveRecord::Schema.define(version: 20180526074407) do
   end
 
   add_index "photos", ["room_id"], name: "index_photos_on_room_id"
+
+  create_table "reserversations", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "room_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "price"
+    t.integer  "total"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reserversations", ["room_id"], name: "index_reserversations_on_room_id"
+  add_index "reserversations", ["user_id"], name: "index_reserversations_on_user_id"
 
   create_table "rooms", force: true do |t|
     t.string   "home_type"
