@@ -26,6 +26,8 @@ gem "paperclip"
 gem 'toastr-rails'
 gem 'geocoder'
 
+gem 'jquery-ui-rails'
+
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 
 gem 'coffee-script-source', '1.8.0'

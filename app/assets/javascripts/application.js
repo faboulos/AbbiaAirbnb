@@ -1,8 +1,8 @@
 
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require toastr
-//= require turbolinks
 //= require_tree .
 
 //= require bootstrap-sprockets
