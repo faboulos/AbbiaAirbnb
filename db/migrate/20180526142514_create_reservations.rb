@@ -1,6 +1,6 @@
-class CreateReserversations < ActiveRecord::Migration
+class CreateReservations < ActiveRecord::Migration
   def change
-    create_table :reserversations do |t|
+    create_table :reservations do |t|
       t.references :user, index: true
       t.references :room, index: true
       t.datetime :start_date
