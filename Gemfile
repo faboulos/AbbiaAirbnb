@@ -64,4 +64,9 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+<<<<<<< HEAD
 end
+=======
+end
+  
+>>>>>>> 0c61b02225d2b0099ada1018db336d82e2bc9e50
