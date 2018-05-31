@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180526142514) do
+ActiveRecord::Schema.define(version: 20180531141459) do
 
   create_table "photos", force: true do |t|
     t.integer  "room_id"
@@ -52,6 +52,18 @@ ActiveRecord::Schema.define(version: 20180526142514) do
 
   add_index "reserversations", ["room_id"], name: "index_reserversations_on_room_id"
   add_index "reserversations", ["user_id"], name: "index_reserversations_on_user_id"
+
+  create_table "reviews", force: true do |t|
+    t.text     "comment"
+    t.integer  "star",       default: 1
+    t.integer  "room_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reviews", ["room_id"], name: "index_reviews_on_room_id"
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
 
   create_table "rooms", force: true do |t|
     t.string   "home_type"
